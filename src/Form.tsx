@@ -53,7 +53,7 @@ const designations = [
   { id: 2, name: "MR" },
 ];
 
-const validationSchema = z.object({
+const validationSchema: ZodType<employee> = z.object({
   firstName: z.string().nonempty({ message: "first name is required" }),
   middleName: z.string(),
   lastName: z.string().nonempty({ message: "last name is required" }),
